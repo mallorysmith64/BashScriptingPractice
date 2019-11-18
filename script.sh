@@ -108,15 +108,22 @@
 
 
 #Simple Function: must call function after curly brackets
-function sayHello() {
-  echo "Hello, people!"
-}
+# function sayHello() {
+#   echo "Hello, people!"
+# }
 
-sayHello
+# sayHello
 
 #Function with positional parameters:
-function greet() {
-  echo "I am $1, and I am $2 years old."
-}
+# function greet() {
+#   echo "I am $1, and I am $2 years old."
+# }
 
-greet "Brad" "36"
+# greet "Brad" "36"
+
+
+#Create Folder and Write to File: first echo writes to file created, 2nd echo consoles response
+mkdir hello
+touch "hello/world.txt"
+echo "Hello World" >> "hello/world.txt"
+echo "Created hello/world.txt"
