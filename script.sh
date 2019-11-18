@@ -10,8 +10,11 @@
 # read -p "Enter your name: " NAME
 # echo "Hello ${NAME}, you are in for a treat."
 
+
+
 #Simple IF statement
 #to end if statement do "if" backwards
+
 # if [ "$NAME" == "Mallory" ]
 # then
 #   echo "Your name is Mallory"
@@ -22,12 +25,30 @@
 #   echo "Your name is NOT Mallory or Jack"
 # fi
 
-#comparisons
-NUM1=3
-NUM2=5
-if [ "$NUM1" -gt "$NUM2" ]
-then 
-  echo "$NUM1 is greater than $NUM2"
+
+
+#comparisons cheatsheet:
+# [[ NUM -eq NUM ]] => -eq means equal
+# [[ NUM -ne NUM ]]	=> -ne means NOT equal
+# [[ NUM -lt NUM ]]	=> -lt means less than
+# [[ NUM -le NUM ]]	=> -le means less than or equal
+# [[ NUM -gt NUM ]]	=> -gt means greater than
+# [[ NUM -ge NUM ]] => -ge means greater than or equal
+
+# NUM1=3
+# NUM2=5
+# if [ "$NUM1" -gt "$NUM2" ]
+# then 
+#   echo "$NUM1 is greater than $NUM2"
+# else
+#   echo "$NUM1 is less than $NUM2"
+# fi
+
+#File Conditions:
+FILE="test.txt"
+if [ -f "$FILE" ]
+then
+  echo "I promise $FILE is a file."
 else
-  echo "$NUM1 is less than $NUM2"
+  echo "I cannot promise that $FILE is actually a file."
 fi
