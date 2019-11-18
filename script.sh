@@ -123,7 +123,7 @@
 
 
 #Create Folder and Write to File: first echo writes to file created, 2nd echo consoles response
-mkdir hello
-touch "hello/world.txt"
-echo "Hello World" >> "hello/world.txt"
-echo "Created hello/world.txt"
+# mkdir hello
+# touch "hello/world.txt"
+# echo "Hello World" >> "hello/world.txt"
+# echo "Created hello/world.txt"
