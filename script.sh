@@ -54,10 +54,28 @@
 # fi
 
 #File Conditions: check that a specific file exists somewhere
-FILE="test.txt"
-if [ -e "$FILE" ]
-then
-  echo "I swear that $FILE exists."
-else
-  echo "Sorry, this file does not actually exist."
-fi
+# FILE="test.txt"
+# if [ -e "$FILE" ]
+# then
+#   echo "I swear that $FILE exists."
+# else
+#   echo "Sorry, this file does not actually exist."
+# fi
+
+
+#Case Statement: 
+#typing "yes" like this: [yY] [eE] [sS] makes it so user input is not case sensitive
+#typing "no" like this: [nN] [oO] makes it so user input is not case sensitive
+#to end the case statement type the word "case" backwards
+read -p "Are you 21 or older? Enter Y/N: " ANSWER
+case "$ANSWER" in 
+  [yY] | [yY][eE][sS])
+    echo "You may have alcohol."
+    ;;
+  [nN] | [nN][oO])
+    echo "You shall not pass. Sorry, no alcohol for you."
+    ;;
+  *)
+    echo "Please enter y/yes or n/no"
+  ;;
+esac
