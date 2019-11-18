@@ -44,11 +44,20 @@
 #   echo "$NUM1 is less than $NUM2"
 # fi
 
-#File Conditions:
+#File Conditions: check that something is a file or not a file
+# FILE="test.txt"
+# if [ -f "$FILE" ]
+# then
+#   echo "I promise $FILE is a file."
+# else
+#   echo "I cannot promise that $FILE is actually a file."
+# fi
+
+#File Conditions: check that a specific file exists somewhere
 FILE="test.txt"
-if [ -f "$FILE" ]
+if [ -e "$FILE" ]
 then
-  echo "I promise $FILE is a file."
+  echo "I swear that $FILE exists."
 else
-  echo "I cannot promise that $FILE is actually a file."
+  echo "Sorry, this file does not actually exist."
 fi
