@@ -97,10 +97,26 @@
 #     mv $FILE $NEW-$FILE
 # done
 
+
 #While Loop: read through file line by line
-LINE=1
-while read -r CURRENT_LINE
-  do 
-    echo "The $LINE: $CURRENT_LINE"
-    ((LINE++))
-done < "./new-1.txt"
+# LINE=1
+# while read -r CURRENT_LINE
+#   do 
+#     echo "The $LINE: $CURRENT_LINE"
+#     ((LINE++))
+# done < "./new-1.txt"
+
+
+#Simple Function: must call function after curly brackets
+function sayHello() {
+  echo "Hello, people!"
+}
+
+sayHello
+
+#Function with positional parameters:
+function greet() {
+  echo "I am $1, and I am $2 years old."
+}
+
+greet "Brad" "36"
